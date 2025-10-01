@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shika Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark">
+<div class="container">
+<a class="back-link" href="index.html">← Back to guides</a>
+
+
+<div class="guide-hero">
+<div>
+<div class="badge bad">Shika</div>
+<h1 class="title">Shika — Plugin & Extend</h1>
+<div class="guide-meta">Estimated read: 6 min</div>
+</div>
+</div>
+
+
+<section class="section">
+<h3>1 — Plugin structure</h3>
+<p>Basic plugin skeleton:</p>
+<div class="code"><button class="copy-btn">Copy</button><code>module.exports = function (options) {
+return {
+name: 'my-plugin',
+init() { /* ... */ }
+}
+}</code></div>
+</section>
+
+
+<section class="section">
+<h3>2 — Registering</h3>
+<p>Load plugins via config.json or automatic discovery.</p>
+</section>
+
+
+<footer class="site-footer">Remember to version plugins semantically.</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
