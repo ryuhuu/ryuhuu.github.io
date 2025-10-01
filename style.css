@@ -1,0 +1,58 @@
+:root{
+--bg:#0b0f14;
+--card:#0f1720bb;
+--glass: rgba(255,255,255,0.06);
+--accent1:#7c3aed; /* purple */
+--accent2:#06b6d4; /* teal */
+--muted:#9aa4b2;
+--glass-border: rgba(255,255,255,0.06);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Poppins,Arial;background:linear-gradient(180deg,var(--bg),#071020 120%);color:#e6eef6}
+.container{max-width:1100px;margin:28px auto;padding:0 20px}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{font-weight:700;font-family:Poppins,system-ui;font-size:22px}
+.logo .accent{background:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav a{color:var(--muted);margin:0 10px;text-decoration:none;font-weight:600}
+.cta{background:linear-gradient(90deg,var(--accent2),var(--accent1));color:#041028;border:none;padding:8px 12px;border-radius:12px;font-weight:600;cursor:pointer}
+.hero{padding:28px 0}
+.hero h1{font-family:Poppins;font-size:36px;margin:6px 0}
+.hero .lead{color:var(--muted);margin-top:6px}
+.search-wrap{margin-top:14px}
+#search{width:100%;padding:12px 14px;border-radius:12px;background:var(--glass);border:1px solid var(--glass-border);color:#eaf3ff}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:16px;padding:18px;border:1px solid rgba(255,255,255,0.04);backdrop-filter: blur(6px);position:relative;overflow:hidden}
+.card::after{content:"";position:absolute;right:-40px;bottom:-40px;width:140px;height:140px;background:radial-gradient(circle at 30% 30%, rgba(124,58,237,0.18), transparent 30%), radial-gradient(circle at 70% 70%, rgba(6,182,212,0.12), transparent 30%);filter:blur(6px);pointer-events:none}
+.card-badge{display:inline-block;padding:6px 8px;border-radius:8px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#041028;font-weight:700;font-size:12px}
+.card h3{margin:10px 0 6px}
+.card p{color:var(--muted);margin:0 0 12px}
+.btn{display:inline-block;padding:8px 12px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:#eaf3ff;border-radius:10px;text-decoration:none}
+.card-actions{margin-top:8px}
+.site-footer{margin:26px 0;color:var(--muted);font-size:14px}
+
+
+/* Responsive */
+@media (max-width:800px){.cards{grid-template-columns:1fr}.hero h1{font-size:28px}}
+
+
+/* Guide page styles (shared) */
+.guide-hero{display:flex;align-items:center;gap:18px;margin:20px 0}
+.guide-hero .title{font-family:Poppins;font-size:28px}
+.guide-meta{color:var(--muted)}
+.section{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:16px;border-radius:12px;margin:14px 0;border:1px solid rgba(255,255,255,0.03)}
+.code{background:#041028;padding:12px;border-radius:8px;color:#e6f7ff;font-family:monospace;font-size:13px;position:relative}
+.copy-btn{position:absolute;right:10px;top:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px;border-radius:8px;color:var(--muted);cursor:pointer}
+.toc{display:flex;gap:10px;flex-wrap:wrap}
+.toc a{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;color:var(--muted);text-decoration:none}
+.back-link{color:var(--muted);text-decoration:none}
+
+
+/* micro animation */
+.btn, .cta{transition:transform .12s ease, box-shadow .12s ease}
+.btn:hover, .cta:hover{transform:translateY(-3px)}
+
+
+/* small utilities */
+.kv{display:flex;gap:8px;align-items:center}
+.bad{padding:4px 8px;border-radius:8px;background:rgba(255,255,255,0.02);color:var(--muted)}
+
