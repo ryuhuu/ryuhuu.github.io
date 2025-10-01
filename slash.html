@@ -1,62 +1,88 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>SLASH Guide</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body class="dark">
-<div class="container">
 <a class="back-link" href="index.html">← Back to guides</a>
 
 
 <div class="guide-hero">
+<img src="1750090562748.jpg" alt="Ryuhuustore Logo" class="logo-img" />
 <div>
 <div class="badge bad">SLASH</div>
-<h1 class="title">SLASH — Quickstart</h1>
-<div class="guide-meta">Estimated read: 4 min · Last updated: —</div>
+<h1 class="title">SLASH — User Guide</h1>
+<div class="guide-meta">On This Page: Introduction · Installation · Basic Usage · Commands · Advanced Features</div>
 </div>
 </div>
 
 
-<div class="toc section">
-<strong>Quick links</strong>
-<div class="toc">
-<a href="#setup">Setup</a>
-<a href="#commands">Commands</a>
-<a href="#troubleshoot">Troubleshoot</a>
-</div>
-</div>
-
-
-<section id="setup" class="section">
-<h3>1 — Setup</h3>
-<p>Follow these steps to get SLASH running locally.</p>
-<div class="code"><button class="copy-btn">Copy</button><code>git clone https://example.com/slash.git
-cd slash
-npm install
-npm run dev</code></div>
+<section class="section">
+<h3>Introduction to SLASH</h3>
+<p>SLASH is a powerful command-line tool designed to streamline your workflow. It provides a unified interface for managing complex operations with simple, intuitive commands. Whether you're a beginner or an advanced user, SLASH adapts to your needs.</p>
 </section>
 
 
-<section id="commands" class="section">
-<h3>2 — Common Commands</h3>
-<ul>
-<li><code>slash start</code> — start local server</li>
-<li><code>slash migrate</code> — run DB migrations</li>
-</ul>
+<section class="section">
+<h3>Installation</h3>
+<p>Getting started with SLASH is easy. Follow the steps below to install SLASH on your system. The installation process typically takes less than 5 minutes.</p>
+<div class="code"><button class="copy-btn">Copy</button><code># Install SLASH via npm
+npm install -g slash-cli
+
+
+# Verify installation
+slash --version
+
+
+# Initialize your first project
+slash init my-project</code></div>
 </section>
 
 
-<section id="troubleshoot" class="section">
-<h3>3 — Troubleshooting</h3>
-<p>If you see an error on boot, check the logs above or run with <code>DEBUG=1</code>.</p>
+<section class="section">
+<h3>Basic Usage</h3>
+<p>SLASH commands follow a simple pattern: <code>slash [command] [options]</code>. Each command is designed to be self-explanatory and comes with built-in help documentation. Let's explore the most common commands you'll use daily.</p>
+<div class="code"><button class="copy-btn">Copy</button><code># Create a new file
+slash create file.txt
+
+
+# List all files
+slash list
+
+
+# Run a task
+slash run build</code></div>
 </section>
 
 
-<footer class="site-footer">Made with ❤️ — edit these pages to include deeper commands or screenshots.</footer>
+<section class="section">
+<h3>Core Commands</h3>
+<p>SLASH provides a comprehensive set of commands for various operations. Here are the essential commands every user should know. Each command supports flags and options for customization.</p>
+<div class="code"><button class="copy-btn">Copy</button><code># File operations
+slash create [filename] # Create new file
+slash delete [filename] # Delete file
+slash move [from] [to] # Move/rename file
+
+
+# Project management
+slash init [name] # Initialize project
+slash build # Build project
+slash deploy # Deploy to production</code></div>
+</section>
+
+
+<section class="section">
+<h3>Advanced Features</h3>
+<p>Once you're comfortable with the basics, explore SLASH's advanced features. These powerful capabilities include custom scripts, automation workflows, and integration with external tools.</p>
+<div class="code"><button class="copy-btn">Copy</button><code># Custom scripts
+slash script add deploy.sh
+
+
+# Automation
+slash auto --watch src/
+
+
+# Integration
+slash connect --service github</code></div>
+</section>
+
+
+<footer class="site-footer">© Ryuhuustore — SLASH Guide</footer>
 </div>
 <script src="script.js"></script>
 </body>
